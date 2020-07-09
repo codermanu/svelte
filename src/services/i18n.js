@@ -1,6 +1,6 @@
 import { derived } from 'svelte/store';
 import { dictionary, locale, _, init } from 'svelte-i18n';
-
+register('en', () => import('../../public/lang/en.json'))
  
 init({
   // fallback to english if the current locale is not in the dictionary

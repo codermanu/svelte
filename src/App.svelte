@@ -9,31 +9,37 @@
   import Pluralization from "./pages/Pluralization.svelte";
   import Numbers from "./pages/Numbers.svelte";
   import DateTime from "./pages/DateTime.svelte";
+
   
-      import { dictionary, locale } from 'svelte-i18n';
-    
+  //import { dictionary, locale, dir } from 'svelte-i18n';
+    import { locale, dir, setupI18n, isLocaleLoaded } from './services/i18n';
     // ...
-    dictionary.set({
-        en: {
-            app: {
-                title: 'Internationalization',
-                subtitle: 'Getting started with localization',
-            },
-        },
-        ar: {
-            app: {
-                title: 'تدويل',
-                subtitle: 'الشروع في التعريب',
-            },
-        },
-        fr: {
-            app: {
-                title: 'Internationalisation',
-                subtitle: 'Premiers pas avec la localisation',
-            },
-        },
-    });
-    locale.set('fr');
+    $: if (!$isLocaleLoaded) {
+        setupI18n({ withLocale: 'en' });
+    }
+    $: { document.dir = $dir; }
+
+    // dictionary.set({
+    //     en: {
+    //         app: {
+    //             title: 'Internationalization',
+    //             subtitle: 'Getting started with localization',
+    //         },
+    //     },
+    //     ar: {
+    //         app: {
+    //             title: 'تدويل',
+    //             subtitle: 'الشروع في التعريب',
+    //         },
+    //     },
+    //     fr: {
+    //         app: {
+    //             title: 'Internationalisation',
+    //             subtitle: 'Premiers pas avec la localisation',
+    //         },
+    //     },
+    // });
+    // locale.set('fr');
 </script>
 
 <style>

@@ -1,0 +1,12 @@
+{
+    "app": {
+        "title": "فيلميك",
+        "subtitle": "مجموعة أفلام مختارة من الثمنينات"
+    },
+    "a":{
+        "won":"bla",
+    "won_awards": "Won {n, plural, =0 {no awards} one {# award} other {# awards}}",
+    "nominated_for_awards": "Nominated for {n, plural, =0 {no awards} one {# award} other {# awards}}"
+    }
+
+}

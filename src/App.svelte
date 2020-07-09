@@ -15,19 +15,25 @@
     // ...
     dictionary.set({
         en: {
-            //app: {
+            app: {
                 title: 'Internationalization',
                 subtitle: 'Getting started with localization',
-            //},
+            },
         },
         ar: {
-            //app: {
-                title: 'فيلميك',
-                subtitle: 'مجموعة أفلام مختارة من الثمنينات',
-            //},
+            app: {
+                title: 'تدويل',
+                subtitle: 'الشروع في التعريب',
+            },
+        },
+        fr: {
+            app: {
+                title: 'Internationalisation',
+                subtitle: 'Premiers pas avec la localisation',
+            },
         },
     });
-    locale.set('en');
+    locale.set('fr');
 </script>
 
 <style>
